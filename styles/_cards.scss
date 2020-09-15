@@ -1,0 +1,75 @@
+#cards{
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    margin-top: 4.625rem;
+
+    @include breakpoint-up(large){
+        flex-direction: row;
+    }
+
+    .card__item{
+        background-color: $veryDarkMagenta; 
+        border-radius: 10px;
+        padding: 40px 32px;
+        
+        @include breakpoint-up(large){
+            padding: 48px 22px 26px 26px;
+
+            &:not(:last-child){
+                margin-right: 1.875rem; //30
+            }
+        }
+
+        &__review{
+            font-size: 100px;
+            padding-bottom: 0;
+        }
+
+        .container{
+            display: flex;
+            margin-bottom: 1.875rem;
+        }
+
+        .heding-text{
+            margin-left: 1.25rem;
+        }
+        
+        .name{
+            font-weight: 700;
+            margin-bottom: 0.375rem;
+        }
+
+        .verified{
+            color: $softPink;
+        }
+        
+        img{
+            border-radius: 50px;
+            border-collapse: separate;
+            width: 2.625rem;
+        }
+
+        &:nth-child(2){
+            margin-top: 1rem;
+            
+            @include breakpoint-up(large){
+                margin-top: 0;
+                position: relative;
+                top: 1rem;
+            }
+        }
+        &:nth-child(3){
+            margin-top: 1rem;
+
+            @include breakpoint-up(large){
+                margin-top: 0;
+                position: relative;
+                top: 2rem;
+            }
+        }
+
+    }
+
+}
+
